@@ -1,6 +1,6 @@
 {
   "name": "ember-addon-semantic-release-travis",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -11,11 +11,12 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/ryanrishi/ember-addon-semantic-release-travis",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember try:each",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0"
@@ -38,7 +39,8 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.16.0",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "semantic-release": "^8.2.0"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
